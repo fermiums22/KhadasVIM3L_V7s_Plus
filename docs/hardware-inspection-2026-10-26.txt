@@ -1,0 +1,77 @@
+MODEL
+Khadas VIM3L
+KERNEL
+5.15.137
+OVERLAY CONFIG
+fdt_overlays=
+AVAILABLE OVERLAYS
+4k2k_fb.dtbo
+disable-i2c3.dtbo
+disable-ts050.dtbo
+i2s.dtbo
+m2x-eth.dtbo
+onewire.dtbo
+os08a10.dtbo
+panfrost.dtbo
+pwm_f.dtbo
+spi1.dtbo
+uart3.dtbo
+watchdog.dtbo
+HEADER PINMUX
+pin 16 (GPIOZ_15): UNCLAIMED
+pin 21 (GPIOH_4): UNCLAIMED
+pin 22 (GPIOH_5): UNCLAIMED
+pin 23 (GPIOH_6): UNCLAIMED
+pin 24 (GPIOH_7): UNCLAIMED
+pin 51 (GPIOA_1): UNCLAIMED
+pin 52 (GPIOA_2): UNCLAIMED
+pin 53 (GPIOA_3): UNCLAIMED
+pin 54 (GPIOA_4): UNCLAIMED
+pin 64 (GPIOA_14): device ffd1c000.i2c function i2c3 group i2c3_sda_a
+pin 65 (GPIOA_15): device ffd1c000.i2c function i2c3 group i2c3_sck_a
+I2S OVERLAY
+/dts-v1/;
+
+/ {
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			pinctrl-names = "tdm_pins";
+			pinctrl-0 = <0xffffffff 0xffffffff 0xffffffff>;
+		};
+	};
+
+	__fixups__ {
+		tdmb = "/fragment@0:target:0";
+		tdmb_mclk = "/fragment@0/__overlay__:pinctrl-0:0";
+		tdmout_b = "/fragment@0/__overlay__:pinctrl-0:4";
+		tdm_b_clk_pins = "/fragment@0/__overlay__:pinctrl-0:8";
+	};
+};
+UART OVERLAY
+/dts-v1/;
+
+/ {
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	__fixups__ {
+		uart_C = "/fragment@0:target:0";
+	};
+};
+CURRENT DEVICE NODES
+/dev/i2c-3
+/dev/i2c-4
+/dev/ttyS0
+/dev/ttyS1
+SOUND CARDS
+ 0 [AMLAUGESOUND   ]: AML-AUGESOUND - AML-AUGESOUND
+                      AML-AUGESOUND

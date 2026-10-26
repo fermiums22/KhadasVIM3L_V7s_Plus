@@ -1,0 +1,937 @@
+{
+  "before": {
+    "captured_unix": 1793028825.3451273,
+    "model": "Khadas VIM3L",
+    "architecture": "aarch64",
+    "os": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "boot_id": "04ecc4ed-9834-46a4-9c18-31bcada598ad",
+    "root_mount": {
+      "rc": 0,
+      "stdout": "/dev/mmcblk0p5 ext4",
+      "stderr": ""
+    },
+    "block_devices": {
+      "rc": 0,
+      "stdout": "NAME         TYPE   SIZE MOUNTPOINTS\nmmcblk0      disk  14.6G \n├─mmcblk0p1  part     4M \n├─mmcblk0p2  part    64M \n├─mmcblk0p3  part     8M \n├─mmcblk0p4  part     1K \n└─mmcblk0p5  part  14.4G /\nmmcblk0boot0 disk     4M \nmmcblk0boot1 disk     4M \nzram0        disk     0B \nzram1        disk 239.4M [SWAP]\nzram2        disk 239.4M [SWAP]\nzram3        disk 239.4M [SWAP]\nzram4        disk 239.4M [SWAP]\nzram5        disk     0B",
+      "stderr": ""
+    },
+    "service": {
+      "rc": 0,
+      "stdout": "active",
+      "stderr": ""
+    },
+    "autostart": {
+      "rc": 0,
+      "stdout": "enabled",
+      "stderr": ""
+    },
+    "nodes": {
+      "rc": 0,
+      "stdout": "/nika_diagnostics\n/nika_motion\n/nika_odometry\n/nika_server_bridge",
+      "stderr": ""
+    },
+    "diagnostics": {
+      "rc": 0,
+      "stdout": "data: '{\"sample_unix\": 1793028837.963236, \"temperature\": 47.7, \"load1\": 0.32, \"memory_used_percent\": 36.48, \"disk_used_percent\": 21.87}'\n---",
+      "stderr": ""
+    },
+    "motion": {
+      "rc": 0,
+      "stdout": "data: '{\"state\": \"disabled_no_hardware\"}'\n---",
+      "stderr": ""
+    },
+    "odometry": {
+      "rc": 0,
+      "stdout": "data: '{\"state\": \"unavailable_no_encoders\"}'\n---",
+      "stderr": ""
+    }
+  },
+  "ha_initial": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "47.7",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:34:10.003913+00:00",
+        "last_reported": "2026-10-26T15:34:10.003913+00:00",
+        "last_updated": "2026-10-26T15:34:10.003913+00:00",
+        "context": {
+          "id": "01M5WDJ0AKHSAQEPZFSXE92H4G",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "0.27",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:34:10.003869+00:00",
+        "last_reported": "2026-10-26T15:34:10.003869+00:00",
+        "last_updated": "2026-10-26T15:34:10.003869+00:00",
+        "context": {
+          "id": "01M5WDJ0AKVCJ575H5KBERKMBK",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "37.28",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:34:10.003730+00:00",
+        "last_reported": "2026-10-26T15:34:10.003730+00:00",
+        "last_updated": "2026-10-26T15:34:10.003730+00:00",
+        "context": {
+          "id": "01M5WDJ0AK21DZBRX42C53GAJ2",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "21.87",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:29:19.003437+00:00",
+        "last_reported": "2026-10-26T15:29:19.003437+00:00",
+        "last_updated": "2026-10-26T15:29:19.003437+00:00",
+        "context": {
+          "id": "01M5WD944VGQJQE8W910T5C51B",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "running",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:29:19.003495+00:00",
+        "last_reported": "2026-10-26T15:29:19.003495+00:00",
+        "last_updated": "2026-10-26T15:29:19.003495+00:00",
+        "context": {
+          "id": "01M5WD944VMXKQ8BYBCGNZ8VQA",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "not_connected",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:29:19.003214+00:00",
+        "last_reported": "2026-10-26T15:29:19.003214+00:00",
+        "last_updated": "2026-10-26T15:29:19.003214+00:00",
+        "context": {
+          "id": "01M5WD944VR4ZQPEAE3462WNYV",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "disabled_no_hardware",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:29:19.003354+00:00",
+        "last_reported": "2026-10-26T15:29:19.003354+00:00",
+        "last_updated": "2026-10-26T15:29:19.003354+00:00",
+        "context": {
+          "id": "01M5WD944VG7EAXWDX6H4BG04J",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable_no_encoders",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:29:19.003467+00:00",
+        "last_reported": "2026-10-26T15:29:19.003467+00:00",
+        "last_updated": "2026-10-26T15:29:19.003467+00:00",
+        "context": {
+          "id": "01M5WD944VJWN6M0D8261K9W03",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "ha_heartbeat_stale": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "47.2",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:34:22.002674+00:00",
+        "last_reported": "2026-10-26T15:34:22.002674+00:00",
+        "last_updated": "2026-10-26T15:34:22.002674+00:00",
+        "context": {
+          "id": "01M5WDJC1J93VAAD5DPYS77M57",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "0.21",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:34:25.003714+00:00",
+        "last_reported": "2026-10-26T15:34:25.003714+00:00",
+        "last_updated": "2026-10-26T15:34:25.003714+00:00",
+        "context": {
+          "id": "01M5WDJEZBQRG7AQ915XP054T8",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "36.83",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:34:13.004225+00:00",
+        "last_reported": "2026-10-26T15:34:13.004225+00:00",
+        "last_updated": "2026-10-26T15:34:13.004225+00:00",
+        "context": {
+          "id": "01M5WDJ38CEDNAG4N55PFETF38",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "21.87",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:29:19.003437+00:00",
+        "last_reported": "2026-10-26T15:29:19.003437+00:00",
+        "last_updated": "2026-10-26T15:29:19.003437+00:00",
+        "context": {
+          "id": "01M5WD944VGQJQE8W910T5C51B",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "degraded",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:34:25.003645+00:00",
+        "last_reported": "2026-10-26T15:34:25.003645+00:00",
+        "last_updated": "2026-10-26T15:34:25.003645+00:00",
+        "context": {
+          "id": "01M5WDJEZBVE2K80M7RQ1SV507",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "not_connected",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:29:19.003214+00:00",
+        "last_reported": "2026-10-26T15:29:19.003214+00:00",
+        "last_updated": "2026-10-26T15:29:19.003214+00:00",
+        "context": {
+          "id": "01M5WD944VR4ZQPEAE3462WNYV",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "unknown",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:34:25.003456+00:00",
+        "last_reported": "2026-10-26T15:34:25.003456+00:00",
+        "last_updated": "2026-10-26T15:34:25.003456+00:00",
+        "context": {
+          "id": "01M5WDJEZB3W6HFG3ZJ6ASFW6A",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable_no_encoders",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:29:19.003467+00:00",
+        "last_reported": "2026-10-26T15:29:19.003467+00:00",
+        "last_updated": "2026-10-26T15:29:19.003467+00:00",
+        "context": {
+          "id": "01M5WD944VJWN6M0D8261K9W03",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "ha_heartbeat_restored": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "47.2",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:34:31.004662+00:00",
+        "last_reported": "2026-10-26T15:34:31.004662+00:00",
+        "last_updated": "2026-10-26T15:34:31.004662+00:00",
+        "context": {
+          "id": "01M5WDJMTWEA1TQPPPP0QS6HT8",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "0.19",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:34:28.004055+00:00",
+        "last_reported": "2026-10-26T15:34:28.004055+00:00",
+        "last_updated": "2026-10-26T15:34:28.004055+00:00",
+        "context": {
+          "id": "01M5WDJHX4YJ2KZ4VCZH9E2TNT",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "36.78",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:34:31.004532+00:00",
+        "last_reported": "2026-10-26T15:34:31.004532+00:00",
+        "last_updated": "2026-10-26T15:34:31.004532+00:00",
+        "context": {
+          "id": "01M5WDJMTWFYS3FV1K8AAS5D4C",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "21.87",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:29:19.003437+00:00",
+        "last_reported": "2026-10-26T15:29:19.003437+00:00",
+        "last_updated": "2026-10-26T15:29:19.003437+00:00",
+        "context": {
+          "id": "01M5WD944VGQJQE8W910T5C51B",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "running",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:34:31.004599+00:00",
+        "last_reported": "2026-10-26T15:34:31.004599+00:00",
+        "last_updated": "2026-10-26T15:34:31.004599+00:00",
+        "context": {
+          "id": "01M5WDJMTWJRGW5J2MATG22A3S",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "not_connected",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:29:19.003214+00:00",
+        "last_reported": "2026-10-26T15:29:19.003214+00:00",
+        "last_updated": "2026-10-26T15:29:19.003214+00:00",
+        "context": {
+          "id": "01M5WD944VR4ZQPEAE3462WNYV",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "disabled_no_hardware",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:34:31.004351+00:00",
+        "last_reported": "2026-10-26T15:34:31.004351+00:00",
+        "last_updated": "2026-10-26T15:34:31.004351+00:00",
+        "context": {
+          "id": "01M5WDJMTW9B4Q78F0XB1774G5",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable_no_encoders",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:29:19.003467+00:00",
+        "last_reported": "2026-10-26T15:29:19.003467+00:00",
+        "last_updated": "2026-10-26T15:29:19.003467+00:00",
+        "context": {
+          "id": "01M5WD944VJWN6M0D8261K9W03",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "ha_mqtt_unavailable": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "unavailable",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:35:04.004317+00:00",
+        "last_reported": "2026-10-26T15:35:04.004317+00:00",
+        "last_updated": "2026-10-26T15:35:04.004317+00:00",
+        "context": {
+          "id": "01M5WDKN24ACRTA7P2W98BN46G",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "unavailable",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:35:04.004463+00:00",
+        "last_reported": "2026-10-26T15:35:04.004463+00:00",
+        "last_updated": "2026-10-26T15:35:04.004463+00:00",
+        "context": {
+          "id": "01M5WDKN2419KRFE272CVFKRXY",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "unavailable",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:35:04.004641+00:00",
+        "last_reported": "2026-10-26T15:35:04.004641+00:00",
+        "last_updated": "2026-10-26T15:35:04.004641+00:00",
+        "context": {
+          "id": "01M5WDKN24W51C3EYVVRGS5VCZ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "unavailable",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:35:04.004608+00:00",
+        "last_reported": "2026-10-26T15:35:04.004608+00:00",
+        "last_updated": "2026-10-26T15:35:04.004608+00:00",
+        "context": {
+          "id": "01M5WDKN24TZKP6MC2CT2A33R8",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:35:04.004528+00:00",
+        "last_reported": "2026-10-26T15:35:04.004528+00:00",
+        "last_updated": "2026-10-26T15:35:04.004528+00:00",
+        "context": {
+          "id": "01M5WDKN2482Q7QM4EFPYZJVRF",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:35:04.004707+00:00",
+        "last_reported": "2026-10-26T15:35:04.004707+00:00",
+        "last_updated": "2026-10-26T15:35:04.004707+00:00",
+        "context": {
+          "id": "01M5WDKN24KB7VNGDJ8NE16391",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:35:04.004673+00:00",
+        "last_reported": "2026-10-26T15:35:04.004673+00:00",
+        "last_updated": "2026-10-26T15:35:04.004673+00:00",
+        "context": {
+          "id": "01M5WDKN24HWVMZSGADBKD4PXF",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:35:04.004566+00:00",
+        "last_reported": "2026-10-26T15:35:04.004566+00:00",
+        "last_updated": "2026-10-26T15:35:04.004566+00:00",
+        "context": {
+          "id": "01M5WDKN243SVX9R128NYD8K1E",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "ha_mqtt_reconnected": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "47.2",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:35:10.005945+00:00",
+        "last_reported": "2026-10-26T15:35:10.005945+00:00",
+        "last_updated": "2026-10-26T15:35:10.005945+00:00",
+        "context": {
+          "id": "01M5WDKTXN2M92PBYPES6ZT4J1",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "0.1",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:35:10.005893+00:00",
+        "last_reported": "2026-10-26T15:35:10.005893+00:00",
+        "last_updated": "2026-10-26T15:35:10.005893+00:00",
+        "context": {
+          "id": "01M5WDKTXN78PT9QSY65MV5J64",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "36.73",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:35:10.005783+00:00",
+        "last_reported": "2026-10-26T15:35:10.005783+00:00",
+        "last_updated": "2026-10-26T15:35:10.005783+00:00",
+        "context": {
+          "id": "01M5WDKTXN5C2BJAER0V6NM1JJ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "21.87",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:35:08.154887+00:00",
+        "last_reported": "2026-10-26T15:35:08.154887+00:00",
+        "last_updated": "2026-10-26T15:35:08.154887+00:00",
+        "context": {
+          "id": "01M5WDKS3TDH902K285Y8NZ2D7",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "running",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:35:08.154528+00:00",
+        "last_reported": "2026-10-26T15:35:08.154528+00:00",
+        "last_updated": "2026-10-26T15:35:08.154528+00:00",
+        "context": {
+          "id": "01M5WDKS3T570TTAWZFGR39F5J",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "not_connected",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:35:08.154934+00:00",
+        "last_reported": "2026-10-26T15:35:08.154934+00:00",
+        "last_updated": "2026-10-26T15:35:08.154934+00:00",
+        "context": {
+          "id": "01M5WDKS3T799EF6CXFQRBZMDZ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "disabled_no_hardware",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:35:08.154979+00:00",
+        "last_reported": "2026-10-26T15:35:08.154979+00:00",
+        "last_updated": "2026-10-26T15:35:08.154979+00:00",
+        "context": {
+          "id": "01M5WDKS3TSG5QCR263NNBV3J2",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable_no_encoders",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:35:08.155014+00:00",
+        "last_reported": "2026-10-26T15:35:08.155014+00:00",
+        "last_updated": "2026-10-26T15:35:08.155014+00:00",
+        "context": {
+          "id": "01M5WDKS3V4EM49MDXXNH538EW",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "boot_id_after": "20dfc0cb-c8f0-4ace-ab33-87cdeebc23b9",
+  "ha_after_reboot": {
+    "states": [
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+        "state": "48.0",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "°C",
+          "device_class": "temperature",
+          "friendly_name": "Nika Robot / Khadas VIM3L CPU temperature"
+        },
+        "last_changed": "2026-10-26T15:35:58.747298+00:00",
+        "last_reported": "2026-10-26T15:35:58.747298+00:00",
+        "last_updated": "2026-10-26T15:35:58.747298+00:00",
+        "context": {
+          "id": "01M5WDNAGVM1XE253JYQTJ7SRX",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+        "state": "0.65",
+        "attributes": {
+          "state_class": "measurement",
+          "friendly_name": "Nika Robot / Khadas VIM3L Load average 1m"
+        },
+        "last_changed": "2026-10-26T15:35:58.747222+00:00",
+        "last_reported": "2026-10-26T15:35:58.747222+00:00",
+        "last_updated": "2026-10-26T15:35:58.747222+00:00",
+        "context": {
+          "id": "01M5WDNAGVKNCS2XTMB98FD42R",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_memory_used",
+        "state": "30.13",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Memory used"
+        },
+        "last_changed": "2026-10-26T15:35:58.747032+00:00",
+        "last_reported": "2026-10-26T15:35:58.747032+00:00",
+        "last_updated": "2026-10-26T15:35:58.747032+00:00",
+        "context": {
+          "id": "01M5WDNAGVQGZSYTYH29SPP418",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_root_disk_used",
+        "state": "21.62",
+        "attributes": {
+          "state_class": "measurement",
+          "unit_of_measurement": "%",
+          "friendly_name": "Nika Robot / Khadas VIM3L Root disk used"
+        },
+        "last_changed": "2026-10-26T15:35:55.748574+00:00",
+        "last_reported": "2026-10-26T15:35:55.748574+00:00",
+        "last_updated": "2026-10-26T15:35:55.748574+00:00",
+        "context": {
+          "id": "01M5WDN7K4EDPW8YHD8R51XYFK",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_ros_state",
+        "state": "running",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L ROS state"
+        },
+        "last_changed": "2026-10-26T15:35:55.748371+00:00",
+        "last_reported": "2026-10-26T15:35:55.748371+00:00",
+        "last_updated": "2026-10-26T15:35:55.748371+00:00",
+        "context": {
+          "id": "01M5WDN7K4NXXQG6K3MDBRBKKX",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_stm32_link",
+        "state": "not_connected",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L STM32 link"
+        },
+        "last_changed": "2026-10-26T15:35:55.748604+00:00",
+        "last_reported": "2026-10-26T15:35:55.748604+00:00",
+        "last_updated": "2026-10-26T15:35:55.748604+00:00",
+        "context": {
+          "id": "01M5WDN7K4PX7BGJ0TBZWR4SX4",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_motion_state",
+        "state": "disabled_no_hardware",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Motion state"
+        },
+        "last_changed": "2026-10-26T15:35:55.748659+00:00",
+        "last_reported": "2026-10-26T15:35:55.748659+00:00",
+        "last_updated": "2026-10-26T15:35:55.748659+00:00",
+        "context": {
+          "id": "01M5WDN7K4H3XGZDT84R9Z995H",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      {
+        "entity_id": "sensor.nika_robot_khadas_vim3l_odometry_state",
+        "state": "unavailable_no_encoders",
+        "attributes": {
+          "friendly_name": "Nika Robot / Khadas VIM3L Odometry state"
+        },
+        "last_changed": "2026-10-26T15:35:55.748690+00:00",
+        "last_reported": "2026-10-26T15:35:55.748690+00:00",
+        "last_updated": "2026-10-26T15:35:55.748690+00:00",
+        "context": {
+          "id": "01M5WDN7K481V6HNG57DFGSCY9",
+          "parent_id": null,
+          "user_id": null
+        }
+      }
+    ],
+    "devices": [
+      {
+        "id": "9079c24914c66853815cad5d03d64ac1",
+        "name": "Nika Robot / Khadas VIM3L",
+        "model": "VIM3L",
+        "manufacturer": "Khadas"
+      }
+    ]
+  },
+  "after": {
+    "captured_unix": 1793028963.1455138,
+    "model": "Khadas VIM3L",
+    "architecture": "aarch64",
+    "os": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "boot_id": "20dfc0cb-c8f0-4ace-ab33-87cdeebc23b9",
+    "root_mount": {
+      "rc": 0,
+      "stdout": "/dev/mmcblk0p5 ext4",
+      "stderr": ""
+    },
+    "block_devices": {
+      "rc": 0,
+      "stdout": "NAME         TYPE   SIZE MOUNTPOINTS\nmmcblk0      disk  14.6G \n├─mmcblk0p1  part     4M \n├─mmcblk0p2  part    64M \n├─mmcblk0p3  part     8M \n├─mmcblk0p4  part     1K \n└─mmcblk0p5  part  14.4G /\nmmcblk0boot0 disk     4M \nmmcblk0boot1 disk     4M \nzram0        disk     0B \nzram1        disk 239.4M [SWAP]\nzram2        disk 239.4M [SWAP]\nzram3        disk 239.4M [SWAP]\nzram4        disk 239.4M [SWAP]\nzram5        disk     0B",
+      "stderr": ""
+    },
+    "service": {
+      "rc": 0,
+      "stdout": "active",
+      "stderr": ""
+    },
+    "autostart": {
+      "rc": 0,
+      "stdout": "enabled",
+      "stderr": ""
+    },
+    "nodes": {
+      "rc": 0,
+      "stdout": "/nika_diagnostics\n/nika_motion\n/nika_odometry\n/nika_server_bridge",
+      "stderr": ""
+    },
+    "diagnostics": {
+      "rc": 0,
+      "stdout": "data: '{\"sample_unix\": 1793028976.7031987, \"temperature\": 48.4, \"load1\": 0.79, \"memory_used_percent\": 35.02, \"disk_used_percent\": 21.62}'\n---",
+      "stderr": ""
+    },
+    "motion": {
+      "rc": 0,
+      "stdout": "data: '{\"state\": \"disabled_no_hardware\"}'\n---",
+      "stderr": ""
+    },
+    "odometry": {
+      "rc": 0,
+      "stdout": "data: '{\"state\": \"unavailable_no_encoders\"}'\n---",
+      "stderr": ""
+    }
+  }
+}

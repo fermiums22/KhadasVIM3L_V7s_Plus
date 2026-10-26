@@ -1,0 +1,47 @@
+{
+  "captured_unix": 1793028749.3025107,
+  "model": "Khadas VIM3L",
+  "architecture": "aarch64",
+  "os": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "boot_id": "04ecc4ed-9834-46a4-9c18-31bcada598ad",
+  "root_mount": {
+    "rc": 0,
+    "stdout": "/dev/mmcblk0p5 ext4",
+    "stderr": ""
+  },
+  "block_devices": {
+    "rc": 0,
+    "stdout": "NAME         TYPE   SIZE MOUNTPOINTS\nmmcblk0      disk  14.6G \n├─mmcblk0p1  part     4M \n├─mmcblk0p2  part    64M \n├─mmcblk0p3  part     8M \n├─mmcblk0p4  part     1K \n└─mmcblk0p5  part  14.4G /\nmmcblk0boot0 disk     4M \nmmcblk0boot1 disk     4M \nzram0        disk     0B \nzram1        disk 239.4M [SWAP]\nzram2        disk 239.4M [SWAP]\nzram3        disk 239.4M [SWAP]\nzram4        disk 239.4M [SWAP]\nzram5        disk     0B",
+    "stderr": ""
+  },
+  "service": {
+    "rc": 0,
+    "stdout": "active",
+    "stderr": ""
+  },
+  "autostart": {
+    "rc": 0,
+    "stdout": "enabled",
+    "stderr": ""
+  },
+  "nodes": {
+    "rc": 0,
+    "stdout": "/nika_motion\n/nika_odometry",
+    "stderr": ""
+  },
+  "diagnostics": {
+    "rc": 0,
+    "stdout": "data: '{\"sample_unix\": 1793028756.9632652, \"temperature\": 48.2, \"load1\": 0.14, \"memory_used_percent\": 38.05, \"disk_used_percent\": 21.87...'\n---",
+    "stderr": ""
+  },
+  "motion": {
+    "rc": 0,
+    "stdout": "data: '{\"state\": \"disabled_no_hardware\"}'\n---",
+    "stderr": ""
+  },
+  "odometry": {
+    "rc": 0,
+    "stdout": "data: '{\"state\": \"unavailable_no_encoders\"}'\n---",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>nika_robot</name><version>0.1.0</version>
+  <description>Khadas diagnostics and disabled robot hardware interfaces.</description>
+  <maintainer email="maintainer@example.invalid">Viktor</maintainer>
+  <license>Proprietary</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend><exec_depend>std_msgs</exec_depend>
+  <exec_depend>launch_ros</exec_depend><exec_depend>python3-paho-mqtt</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>
