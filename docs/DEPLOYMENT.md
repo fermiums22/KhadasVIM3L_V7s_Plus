@@ -7,7 +7,8 @@ VIM3 ошибочно. Использовать только образ **vim3l*
 
 Установлена и проверена **Ubuntu 24.04.5 LTS ARM64** на eMMC:
 `/dev/mmcblk0p5`, тип носителя MMC, полный объём 14.6 GiB.
-Имя `nika-robot-vim3l`, текущий DHCP-адрес **192.168.0.241**.
+Имя `nika-robot-vim3l`, постоянный адрес Wi-Fi **192.168.0.125**.
+Первоначальный проводной DHCP-адрес: 192.168.0.241.
 ROS 2 Jazzy ROS Base установлен, четыре узла работают, `nika-robot.service`
 активна и включена в автозапуск. После реальной перезагрузки boot_id изменился,
 служба и восемь датчиков HA восстановились автоматически.
@@ -42,7 +43,7 @@ ROS 2 Jazzy ROS Base установлен, четыре узла работаю�
 с ограниченными Windows ACL; значение не помещается в исходники и журнал.
 
 ```powershell
-ssh -i D:/HAOS/ssh/khadas_vim3l_ed25519 -o UserKnownHostsFile=D:/HAOS/ssh/khadas_vim3l_known_hosts khadas@192.168.0.241
+ssh -i D:/HAOS/ssh/khadas_vim3l_ed25519 -o UserKnownHostsFile=D:/HAOS/ssh/khadas_vim3l_known_hosts khadas@192.168.0.125
 ```
 
 На плате: исходники `/opt/nika-robot/ros_ws/src/nika_robot`, служба `nika-robot`,
@@ -51,7 +52,33 @@ ssh -i D:/HAOS/ssh/khadas_vim3l_ed25519 -o UserKnownHostsFile=D:/HAOS/ssh/khadas
 Существующие права остальных MQTT-пользователей сохранены. Резерв брокера:
 `CT103:/root/config-backups/nika-khadas-20261026-151732`.
 Сеть Ethernet подключается автоматически, системные таймеры обновлений включены,
-часовой пояс Europe/Minsk. Адрес DHCP не закреплялся на роутере.
+часовой пояс Europe/Minsk. Wi-Fi DHCP закреплён на роутере Archer C6:
+`18-93-7F-67-78-4A → 192.168.0.125`.
+
+## Wi-Fi и панель HA
+
+Основной профиль NetworkManager `nika-home-5g`: `Fermiums`, 5 ГГц,
+автоподключение, приоритет 100. Резервный `nika-home-24g`: `Fermiums_2.4`,
+2.4 ГГц, приоритет 50. У обоих постоянный аппаратный MAC и метрика маршрута 50.
+Пароли находятся только на плате в root-only профилях NetworkManager.
+`tools/setup_wifi_from_windows.py` переносит сохранённые Windows WLAN-профили
+по SSH, не выводя пароли. Для первоначального подключения через кабель можно
+переопределить `KHADAS_SSH_TARGET=khadas@192.168.0.241`.
+
+После реального reboot 26.10.2026 изменился boot_id, автоматически восстановились
+Fermiums (5180 МГц), IP .125, служба ROS и все восемь сущностей HA.
+При отключённом через NetworkManager eth0 MQTT и SSH проверены через wlan0.
+Переключение на резервную сеть 2.4 ГГц отдельно не проверялось.
+
+Панель [Робот](http://192.168.0.4:8123/nika-robot/overview) находится в боковом меню HA.
+Исходник: `home-assistant/robot-dashboard.json`; публикация:
+`python tools/deploy_dashboard.py`. Скрипт сохраняет резервную копию существующей
+панели, проверяет сущности и сравнивает результат чтения с отправленным конфигом.
+STM32, движение и одометрия отображаются как ещё не подключённые.
+
+На рабочем столе владельца создан единственный профиль `Khadas_VIM3L.tlp`:
+khadas@192.168.0.125:22, ключ клиента и ключи хоста сохранены внутри профиля.
+Вход проверен через Bitvise sexec с `-noRegistry`; профиль не хранится в Git.
 
 Проверку ROS запускать от пользователя службы: Fast DDS shared-memory permissions
 разделяют пользователей `khadas` и `nika-robot`.

@@ -1,0 +1,20 @@
+{
+  "dashboard": {
+    "id": "nika_robot",
+    "url_path": "nika-robot",
+    "title": "Робот",
+    "icon": "mdi:robot",
+    "show_in_sidebar": true,
+    "require_admin": false,
+    "mode": "storage"
+  },
+  "url": "http://192.168.0.4:8123/nika-robot/overview",
+  "entities": {
+    "sensor.nika_robot_khadas_vim3l_cpu_temperature": "47.9",
+    "sensor.nika_robot_khadas_vim3l_load_average_1m": "0.02",
+    "sensor.nika_robot_khadas_vim3l_memory_used": "36.17",
+    "sensor.nika_robot_khadas_vim3l_root_disk_used": "21.62",
+    "sensor.nika_robot_khadas_vim3l_ros_state": "running"
+  },
+  "readback_matches": true
+}

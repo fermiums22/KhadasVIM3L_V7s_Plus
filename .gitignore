@@ -12,3 +12,5 @@ config/mqtt-password
 *.partial
 secrets.yaml
 key.txt
+*.tlp
+*.bscp

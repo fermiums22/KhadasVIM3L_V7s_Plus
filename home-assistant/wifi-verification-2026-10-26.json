@@ -1,0 +1,21 @@
+{
+  "boot_id_before": "20dfc0cb-c8f0-4ace-ab33-87cdeebc23b9",
+  "after_reboot": "8663380b-54c0-4f30-badb-83fe2095268e\nConnected to 6c:4c:bc:ed:20:94 (on wlan0)\n\tSSID: Fermiums\n\tfreq: 5180.0\n\tRX: 65519 bytes (530 packets)\n\tTX: 59212 bytes (979 packets)\n\tsignal: -57 dBm\n\trx bitrate: 351.0 MBit/s\n\ttx bitrate: 390.0 MBit/s\nwlan0:connected:nika-home-5g\neth0:disconnected:\nwlan1:disconnected:\ndummy0:unmanaged:\nlo:unmanaged:\np2p-dev-wlan0:unmanaged:\np2p-dev-wlan1:unmanaged:\n192.168.0.8 dev wlan0 src 192.168.0.125 uid 1000 \n    cache \nactive\n",
+  "ha_states": {
+    "sensor.nika_robot_khadas_vim3l_cpu_temperature": "50.3",
+    "sensor.nika_robot_khadas_vim3l_load_average_1m": "0.18",
+    "sensor.nika_robot_khadas_vim3l_memory_used": "31.52",
+    "sensor.nika_robot_khadas_vim3l_root_disk_used": "21.62",
+    "sensor.nika_robot_khadas_vim3l_ros_state": "running",
+    "sensor.nika_robot_khadas_vim3l_stm32_link": "not_connected",
+    "sensor.nika_robot_khadas_vim3l_motion_state": "disabled_no_hardware",
+    "sensor.nika_robot_khadas_vim3l_odometry_state": "unavailable_no_encoders"
+  },
+  "reservation": {
+    "router": "192.168.0.1",
+    "mac": "18-93-7F-67-78-4A",
+    "ip": "192.168.0.125"
+  },
+  "bitvise_profile": "Khadas_VIM3L.tlp",
+  "bitvise_no_registry_hostname": "nika-robot-vim3l"
+}

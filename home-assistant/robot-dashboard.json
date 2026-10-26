@@ -1,0 +1,94 @@
+{
+  "title": "Робот",
+  "views": [
+    {
+      "title": "Робот",
+      "path": "overview",
+      "icon": "mdi:robot",
+      "show_icon_and_title": true,
+      "type": "masonry",
+      "cards": [
+        {
+          "type": "vertical-stack",
+          "cards": [
+            {
+              "type": "markdown",
+              "title": "Ника · Робот",
+              "content": "{% set s = states('sensor.nika_robot_khadas_vim3l_ros_state') %}\n{% if s == 'running' %}\n## 🟢 На связи\nБортовой компьютер работает. Все четыре узла ROS отвечают.\n{% elif s == 'degraded' %}\n## 🟠 Требуется внимание\nКомпьютер на связи, но один из узлов ROS перестал отвечать.\n{% else %}\n## ⚪ Нет свежих данных\nПроверь питание и подключение робота к домашней сети.\n{% endif %}\n\n**Khadas VIM3L** · Ubuntu · ROS 2 Jazzy\n\nЗдесь уже можно наблюдать настоящую температуру и ресурсы робота — паять для этого ничего не нужно."
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.nika_robot_khadas_vim3l_cpu_temperature",
+              "name": "Температура платы",
+              "min": 0,
+              "max": 100,
+              "needle": true,
+              "severity": {"green": 0, "yellow": 70, "red": 85}
+            },
+            {
+              "type": "history-graph",
+              "title": "Температура за 6 часов",
+              "hours_to_show": 6,
+              "entities": [{"entity": "sensor.nika_robot_khadas_vim3l_cpu_temperature", "name": "Плата"}]
+            }
+          ]
+        },
+        {
+          "type": "vertical-stack",
+          "cards": [
+            {
+              "type": "tile",
+              "entity": "sensor.nika_robot_khadas_vim3l_load_average_1m",
+              "name": "Нагрузка за минуту",
+              "icon": "mdi:chip"
+            },
+            {
+              "type": "grid",
+              "columns": 2,
+              "square": false,
+              "cards": [
+                {"type": "gauge", "entity": "sensor.nika_robot_khadas_vim3l_memory_used", "name": "Память занята", "min": 0, "max": 100, "needle": true, "severity": {"green": 0, "yellow": 75, "red": 90}},
+                {"type": "gauge", "entity": "sensor.nika_robot_khadas_vim3l_root_disk_used", "name": "Диск занят", "min": 0, "max": 100, "needle": true, "severity": {"green": 0, "yellow": 75, "red": 90}}
+              ]
+            },
+            {
+              "type": "history-graph",
+              "title": "Ресурсы за 6 часов",
+              "hours_to_show": 6,
+              "entities": [
+                {"entity": "sensor.nika_robot_khadas_vim3l_memory_used", "name": "Память, %"},
+                {"entity": "sensor.nika_robot_khadas_vim3l_root_disk_used", "name": "Диск, %"}
+              ]
+            },
+            {
+              "type": "markdown",
+              "content": "**Как читать нагрузку:** это среднее число задач за минуту, не проценты CPU. На VIM3L четыре вычислительных ядра. Нажми на любой показатель, чтобы открыть подробности."
+            }
+          ]
+        },
+        {
+          "type": "vertical-stack",
+          "cards": [
+            {
+              "type": "markdown",
+              "title": "Готовность робота",
+              "content": "{% set labels = {'running': '🟢 Работает', 'degraded': '🟠 Не все узлы отвечают', 'not_connected': '⚪ Пока не подключён', 'disabled_no_hardware': '🔒 Отключено до подключения оборудования', 'unavailable_no_encoders': '⚪ Ожидает энкодеры', 'unknown': 'Нет данных', 'unavailable': 'Нет связи'} %}\n| Часть робота | Состояние |\n|---|---|\n| Система ROS | {{ labels.get(states('sensor.nika_robot_khadas_vim3l_ros_state'), 'Нет данных') }} |\n| Контроллер STM32 | {{ labels.get(states('sensor.nika_robot_khadas_vim3l_stm32_link'), 'Нет данных') }} |\n| Движение | {{ labels.get(states('sensor.nika_robot_khadas_vim3l_motion_state'), 'Нет данных') }} |\n| Одометрия | {{ labels.get(states('sensor.nika_robot_khadas_vim3l_odometry_state'), 'Нет данных') }} |\n\n**Следующий этап:** подключение STM32, микрофона и PCM5102. Данные о положении и батарее появятся после подключения соответствующего оборудования."
+            },
+            {
+              "type": "history-graph",
+              "title": "Работа системы за 6 часов",
+              "hours_to_show": 6,
+              "entities": [{"entity": "sensor.nika_robot_khadas_vim3l_ros_state", "name": "ROS"}]
+            },
+            {
+              "type": "button",
+              "name": "Все датчики робота",
+              "icon": "mdi:robot-outline",
+              "tap_action": {"action": "navigate", "navigation_path": "/config/devices/device/9079c24914c66853815cad5d03d64ac1"}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
